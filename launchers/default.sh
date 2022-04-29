@@ -9,12 +9,15 @@ dt-launchfile-init
 # ----------------------------------------------------------------------------
 
 
+
 # NOTE: Use the variable DT_REPO_PATH to know the absolute path to your code
 # NOTE: Use `dt-exec COMMAND` to run the main process (blocking process)
 
 # launching app
-dt-exec echo "This is an empty launch script. Update it to launch your application."
-
+export VEHICLE_NAME=ankkuli
+export ROS_MASTER_URI=http://ankkuli.local:11311
+rostopic list
+dt-exec rosrun servo_drive open_loop.py
 
 # ----------------------------------------------------------------------------
 # YOUR CODE ABOVE THIS LINE
